@@ -105,7 +105,3 @@ aquareason/
 └── requirements.txt
 ```
 
-## A note
-
-AquaReason is a course project. It is not a replacement for a proper laboratory
-test or professional advice.

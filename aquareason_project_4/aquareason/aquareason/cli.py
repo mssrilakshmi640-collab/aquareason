@@ -1,5 +1,4 @@
-"""
-Command-line interface for AquaReason.
+
 
 Usage:
     python -m aquareason.cli --sample rural_well

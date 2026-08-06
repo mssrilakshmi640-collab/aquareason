@@ -1,0 +1,32 @@
+{
+  "rural_well": {
+    "description": "Rural well near farmland, suspected fertiliser runoff.",
+    "readings": {"nitrate": 62.0, "arsenic": 0.004, "lead": 0.002,
+                 "fluoride": 0.6, "turbidity": 1.2, "ph": 7.1,
+                 "chlorine": 0.4, "coliform": false}
+  },
+  "old_building_tap": {
+    "description": "Tap in an old building with copper and lead plumbing, soft water.",
+    "readings": {"nitrate": 8.0, "arsenic": 0.003, "lead": 0.028,
+                 "fluoride": 0.4, "turbidity": 0.8, "ph": 6.1,
+                 "chlorine": 0.5, "coliform": false}
+  },
+  "network_end_epanet": {
+    "description": "Far end of an EPANET/EPYT-Flow network, long residence time.",
+    "readings": {"nitrate": 12.0, "arsenic": 0.002, "lead": 0.004,
+                 "fluoride": 0.5, "turbidity": 6.5, "ph": 7.4,
+                 "chlorine": 0.05, "coliform": true}
+  },
+  "geological_arsenic": {
+    "description": "Groundwater over an arsenic-bearing aquifer.",
+    "readings": {"nitrate": 5.0, "arsenic": 0.045, "lead": 0.001,
+                 "fluoride": 2.1, "turbidity": 0.5, "ph": 7.8,
+                 "chlorine": 0.3, "coliform": false}
+  },
+  "clean_supply": {
+    "description": "Well-run municipal supply, all readings inside limits.",
+    "readings": {"nitrate": 10.0, "arsenic": 0.003, "lead": 0.002,
+                 "fluoride": 0.7, "turbidity": 0.4, "ph": 7.5,
+                 "chlorine": 0.6, "coliform": false}
+  }
+}

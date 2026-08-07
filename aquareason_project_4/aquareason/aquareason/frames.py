@@ -16,7 +16,7 @@ from dataclasses import dataclass, field
 from typing import List
 
 
-# ---- Frame definitions -----------------------------------------------------
+# Frame definitions 
 
 @dataclass
 class Treatment:
@@ -41,7 +41,7 @@ class ContaminantFrame:
     guideline: str = ""      # where the number comes from
 
 
-# ---- The knowledge base ----------------------------------------------------
+#  The knowledge base 
 # Numbers are the guideline values. Nitrate is given as NO3 (WHO 50 mg/L).
 
 KB = {

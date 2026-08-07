@@ -8,7 +8,7 @@ or combines several facts into a new conclusion. Every rule that fires writes a
 short line into a trace, so the final result comes with its own explanation.
 
 Fact types
-----------
+
 Reading(param, value)      a numeric measurement
 Presence(param, present)   a yes/no measurement (coliform)
 Limit(param, kind, value)  a guideline value pulled from the knowledge base
@@ -50,7 +50,7 @@ class AquaRules(KnowledgeEngine):
         self.inferences = []       # list of (name, detail) combined conclusions
         self.trace = []            # human readable log of what fired
 
-    # -- Load the guideline limits from the knowledge base as facts ----------
+    #  Load the guideline limits from the knowledge base as facts 
     @DefFacts()
     def load_limits(self):
         for f in KB.values():
@@ -68,7 +68,7 @@ class AquaRules(KnowledgeEngine):
         self.trace.append(reason)
         self.declare(Exceedance(param=param))
 
-    # -- Single-parameter rules ---------------------------------------------
+    #  Single-parameter rules 
     @Rule(Reading(param=MATCH.p, value=MATCH.v),
           Limit(param=MATCH.p, kind="max", value=MATCH.lim),
           TEST(lambda v, lim: v > lim))
@@ -102,7 +102,7 @@ class AquaRules(KnowledgeEngine):
         self._flag(p, "R5  %s detected as present -> %s"
                    % (p, KB[p].contaminant))
 
-    # -- Combination rules (infer new facts from several conclusions) -------
+    #  Combination rules (infer new facts from several conclusions) 
     @Rule(Exceedance(param="chlorine"), Exceedance(param="coliform"))
     def low_chlorine_and_coliform(self):
         detail = ("Low chlorine residual together with coliform presence points "
